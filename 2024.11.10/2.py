@@ -1,3 +1,4 @@
+# Функция рассчитывает стоимость поездки на такси
 def taxi_cost(length: int, time: int = 0) -> int | None:
     if length<0 or time<0:
         return None
