@@ -1,3 +1,4 @@
+# Функция удаляет n наименьших и n наибольших значений из списка чисел
 def numbers_strip(numbers: list[float], n: int = 1,*,copy: bool = False) -> list[float]:
     if copy:
         numbers=numbers.copy()
