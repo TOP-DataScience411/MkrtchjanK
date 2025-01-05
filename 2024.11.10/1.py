@@ -1,3 +1,4 @@
+# Функция проверяет, является ли заданный пароль надежным, по определенным условиям
 def strong_password(password):
     if len(password)<8:
         return False
