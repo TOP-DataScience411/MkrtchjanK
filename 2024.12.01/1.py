@@ -1,6 +1,8 @@
 from datetime import date, timedelta
 from itertools import cycle
 
+# Функция создает расписание дат, начиная с заданной даты, включая определенные дни недели, исключая даты, попадающие в период отпусков.
+
 def schedule(start_date: date, first_weekday: int, *weekdays: int, total_days: int, date_format: str = '%d/%m/%Y'):
     vacations = globals().get('vacations', [])
     dates = []
