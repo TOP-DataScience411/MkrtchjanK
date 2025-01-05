@@ -1,3 +1,4 @@
+# Функция вычисляет длину недостающей стороны прямоугольного треугольника
 from math import sqrt
 def orth_triangle(cathetus1: float = 0, cathetus2: float = 0, hypotenuse: float = 0) -> float | None:
     sides = [cathetus1, cathetus2, hypotenuse]
