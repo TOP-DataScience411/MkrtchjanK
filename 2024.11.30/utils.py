@@ -1,6 +1,7 @@
 from shutil import get_terminal_size
 import textwrap
 
+#Функция генерирует строку с текстом, обрамлённым рамкой из символов '=' и '#'
 def important_message(message: str) -> str:
     width = get_terminal_size().columns - 1
     top = '#' + '=' * (width - 2) + '#'
