@@ -1,3 +1,4 @@
+# Функция вычисляет произведение чисел в списке
 def product(nums):
     if not nums:
         return 1.0
