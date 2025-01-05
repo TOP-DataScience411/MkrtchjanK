@@ -1,3 +1,4 @@
+# Функция определяет правильную форму существительного в зависимости от числа
 def countable_nouns(number: int, noun: tuple[str, str, str]) -> str:
         if number%10==1 and number%100!=11:
             return noun[0]
