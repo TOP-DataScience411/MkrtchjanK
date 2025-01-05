@@ -1,4 +1,5 @@
 import utils
+#Функция запрашивает у пользователя сообщение и выводит его с помощью функции important_message.
 def main()-> None:
     text=input('текст сообщения: ')
     print(utils.important_message(text))
