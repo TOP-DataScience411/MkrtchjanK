@@ -1,3 +1,4 @@
+# Функция вычисляет медиану, среднее арифметическое, среднее геометрическое и среднее гармоническое значения для заданных чисел
 from math import prod
 def central_tendency(a: float, b: float, *nums: float) -> dict[str, float]:
     total={}
