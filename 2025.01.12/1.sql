@@ -12,7 +12,7 @@ FROM doctors;
 
 SELECT ROUND(AVG(premium), 2) AS avg_premium 
 FROM doctors 
-WHERE salary > 59441.3;
+WHERE salary > 59441.30;
 
 
 Запросы к таблице vacations:
