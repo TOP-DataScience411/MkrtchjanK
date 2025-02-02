@@ -42,4 +42,4 @@ ORDER BY dep_id ASC;
 SELECT SUM(amount) as total_year_donations, extract(year from date), sponsor_id
 FROM donations
 GROUP BY sponsor_id, extract(year from date)
-ORDER BY sponsor_id ASC, extract(year from date) ASC;
+ORDER BY sponsor_id, extract(year from date) ASC;
