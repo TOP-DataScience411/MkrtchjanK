@@ -51,7 +51,7 @@ ORDER BY total_vacation_days ASC;
 SELECT
     dep.id,
     dep.name,
-    ROUND(SUM(don.amount) / COUNT(DISTINCT wards.id)) AS amount_ward
+    ROUND(SUM(don.amount) / COUNT(wards.id)) AS amount_ward
 FROM departments as dep
 JOIN wards ON dep.id = wards.dep_id
 JOIN donations as don 
