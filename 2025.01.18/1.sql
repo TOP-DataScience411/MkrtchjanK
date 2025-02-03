@@ -2,7 +2,7 @@
     
 1. Вывести названия стран и названия сопоставленных им столиц
 SELECT 
-    сountry.Name, 
+    country.Name, 
     city.Name
 FROM country 
 INNER JOIN city 
