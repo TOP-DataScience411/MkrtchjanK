@@ -1,0 +1,36 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LinearRegression
+
+# Загрузка данных
+data = np.load("data1.npz")
+X_all = data['x'].reshape(-1, 1)
+y_all = data['y']
+
+# Черновая модель на всех данных
+draft_model = LinearRegression()
+draft_model.fit(X_all, y_all)
+y_pred_all = draft_model.predict(X_all)
+
+# Выбор точек, которые отклоняются от линии не больше чем на 1.0
+residuals = np.abs(y_all - y_pred_all)
+selected = residuals < 1.0
+
+X_selected = X_all[selected]
+y_selected = y_all[selected]
+
+# Повторная регрессия только на линейной части
+model = LinearRegression()
+model.fit(X_selected, y_selected)
+line = model.predict(X_selected)
+
+# Визуализация
+plt.figure(figsize=(8, 6))
+plt.scatter(X_selected, y_selected, color='green', label='Linear Segment')
+plt.plot(X_selected, line, color='orange', linewidth=2, label='Fitted Line')
+plt.title(f'Linear Regression after Filtering (MAE < 1.0)\ny = {model.coef_[0]:.2f}x + {model.intercept_:.2f}')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.grid(True)
+plt.show()
